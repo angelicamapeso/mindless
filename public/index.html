@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Requiring A-Frame script-->
+  <script src="/js/aframe.min.js"></script>
   <title>Mix N' Match</title>
 </head>
 <body>
-  <h1>Hello world!</h1>
+  <a-scene>
+    <a-entity id="box"
+              position="0 1 -2"
+              geometry="primitive:box; width:1.0; height:1.0; depth:1.0;"
+              material="color:#FF0000;"></a-entity>
+  </a-scene>
 </body>
 </html>
