@@ -7,6 +7,8 @@
   <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
   <!--A-Frame environment-->
   <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+  <!--A-Frame Extras: https://github.com/n5ro/aframe-extras-->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   <!--Components-->
   <script src="/js/components/env-modifier.js"></script>
   <title>Mix N' Match</title>
@@ -32,7 +34,8 @@
               material="color:#FF0000;"></a-entity>
 
     <!--Setting environment-->
-    <a-entity id="env" environment="preset: default;"></a-entity>
+    <!-- <a-entity id="env" environment="preset: default;"></a-entity> -->
+    <a-ocean width="500" depth="500" density="100"></a-ocean>
   </a-scene>
 </body>
 </html>
