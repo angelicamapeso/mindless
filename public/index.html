@@ -19,10 +19,12 @@
       <a-asset-item id="small-boat" src="/models/wooden_boat/scene.gltf"></a-asset-item>
       <a-asset-item id="clouds" src="/models/3d_mesh_of_a_cloud/scene.gltf"></a-asset-item>
       <a-asset-item id="campfire" src="/models/campfire_wood_survival_warm_and_light/scene.gltf"></a-asset-item>
+      <a-asset-item id="ship" src="/models/flying_cyber_ship/scene.gltf"></a-asset-item>
     </a-assets>
 
     <!-- <a-entity gltf-model="#small-boat" scale="0.02 0.02 0.02"></a-entity> -->
     <a-entity gltf-model="#campfire" position="0 0 0" scale="0.01 0.01 0.01"></a-entity>
+    <a-entity gltf-model="#ship" position="-0.446 -1.985 0" scale="0.01 0.01 0.01"></a-entity>
     
     <!--Camera-->
     <a-entity camera wasd-controls look-controls position="0 1.6 0">
@@ -37,9 +39,9 @@
     material="color:#FF0000;"></a-entity>
     
     <!--Setting environment-->
-    <a-entity id="env" environment="preset: default;"></a-entity>
+    <!-- <a-entity id="env" environment="preset: default;"></a-entity> -->
     <!-- <a-ocean width="500" depth="500" density="100"></a-ocean> -->
-    <!-- <a-entity gltf-model="#clouds" position="0 34.15 0" scale="0.02 0.02 0.02"></a-entity> -->
+    <a-entity gltf-model="#clouds" position="0 34.15 0" scale="0.02 0.02 0.02"></a-entity>
   </a-scene>
 </body>
 </html>
