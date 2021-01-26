@@ -22,6 +22,8 @@ As development progresses, Teleport is set to have the following features:
 ### Front-End
 
 - [A-Frame](https://aframe.io/)
+- [aframe-environment-component](https://github.com/supermedium/aframe-environment-component)
+- [A-Frame Extras](https://github.com/n5ro/aframe-extras)
 
 ### Back-End
 
