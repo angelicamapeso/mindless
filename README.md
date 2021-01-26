@@ -27,6 +27,11 @@ As development progresses, Teleport is set to have the following features:
 
 - [Express](https://expressjs.com/)
 
-## Resources
+## 3D Models
 
-A number of 3D models from [Sketchfab](https://sketchfab.com/) will be used in this project. They will be listed here as they are used.
+Each model is licensed under [**CC Attribution**](https://creativecommons.org/licenses/by/4.0/)
+
+- [Wooden Boat by o0ozexo0o](https://sketchfab.com/3d-models/wooden-boat-55118b23a5494e4b81eed831b9f8c871)
+- [3D Mesh of a Cloud by DanielCork](https://sketchfab.com/3d-models/3d-mesh-of-a-cloud-707f6e225ea74776b5c1f298160b27ea)
+- [Campfire Wood Survival Warm and Light by digrafstudio](https://sketchfab.com/3d-models/campfire-wood-survival-warm-and-light-efd0ac8c5cca46bfaae91b3851b9c75f)
+- [Flying cyber ship by igoremba](https://sketchfab.com/3d-models/flying-cyber-ship-6cc34c7faa0646efb7dcf87747418f9e)
