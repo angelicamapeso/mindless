@@ -1,0 +1,315 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 24607,
+      "max": [
+        91.428413391113281,
+        56.577072143554688,
+        35.491096496582031
+      ],
+      "min": [
+        -23.001987457275391,
+        -43.236652374267578,
+        -92.884178161621094
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 295284,
+      "componentType": 5126,
+      "count": 24607,
+      "max": [
+        0.99959170818328857,
+        0.99982041120529175,
+        0.99754738807678223
+      ],
+      "min": [
+        -0.99999314546585083,
+        -0.99991756677627563,
+        -0.99839603900909424
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 24607,
+      "max": [
+        0.99997627735137939,
+        0.99995553493499756,
+        0.99971503019332886,
+        1
+      ],
+      "min": [
+        -0.99999392032623291,
+        -0.99980217218399048,
+        -0.99999058246612549,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 24607,
+      "max": [
+        0.99319803714752197,
+        0.99318748712539673
+      ],
+      "min": [
+        0.006801987998187542,
+        0.0068125724792480469
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 102240,
+      "max": [
+        24606
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "digrafstudio (https://sketchfab.com/digrafstudio)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/campfire-wood-survival-warm-and-light-efd0ac8c5cca46bfaae91b3851b9c75f",
+      "title": "Campfire Wood Survival Warm and Light"
+    },
+    "generator": "Sketchfab-5.5.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 408960,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 196856,
+      "byteOffset": 408960,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 590568,
+      "byteOffset": 605816,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 393712,
+      "byteOffset": 1196384,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1590096,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "images": [
+    {
+      "uri": "textures/CfWood_occlusion.png"
+    },
+    {
+      "uri": "textures/CfWood_specularGlossiness.png"
+    },
+    {
+      "uri": "textures/CfWood_diffuse.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            0.99561737800000005,
+            0.99561737800000005,
+            0.99561737800000005,
+            1
+          ],
+          "diffuseTexture": {
+            "index": 2,
+            "texCoord": 0
+          },
+          "glossinessFactor": 1,
+          "specularFactor": [
+            0,
+            0,
+            0
+          ],
+          "specularGlossinessTexture": {
+            "index": 1,
+            "texCoord": 0
+          }
+        }
+      },
+      "name": "CfWood",
+      "occlusionTexture": {
+        "index": 0,
+        "strength": 0.70293445119999998,
+        "texCoord": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "CampFireWood_CfWood_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "CfWood.fbx"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        0.56672046869526504,
+        -0.46477902304822571,
+        0.68030020586220308,
+        0,
+        0.634135257186904,
+        0.77322213858146815,
+        -1.1102230246251565e-16,
+        0,
+        -0.52602318005418558,
+        0.43140234600873201,
+        0.73293357809820936,
+        0,
+        -39.242237091064453,
+        28.209806442260742,
+        0,
+        1
+      ],
+      "name": "CampFireWood"
+    },
+    {
+      "mesh": 0,
+      "name": "CampFireWood_CfWood_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
+
