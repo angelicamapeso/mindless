@@ -78,14 +78,14 @@
     <!--End of UI-->
 
     <!--Scene objects-->
-    <a-entity class="scene-object" gltf-model="#campfire" position="0 0 0" scale="0.01 0.01 0.01"></a-entity>
-    <a-entity class="scene-object" gltf-model="#small-boat" scale="0.02 0.02 0.02" visible="false"></a-entity>
-    <a-entity class="scene-object" gltf-model="#ship" position="-0.297 -1.985 -0.513" scale="0.01 0.01 0.01" rotation="0 -90 0" visible="false"></a-entity>
+    <a-entity class="scene-object" id="ground-object" gltf-model="#campfire" position="0 0 0" scale="0.01 0.01 0.01"></a-entity>
+    <a-entity class="scene-object" id="water-object" gltf-model="#small-boat" scale="0.02 0.02 0.02" visible="false"></a-entity>
+    <a-entity class="scene-object" id="air-object" gltf-model="#ship" position="-0.297 -1.985 -0.513" scale="0.01 0.01 0.01" rotation="0 -90 0" visible="false"></a-entity>
     
     <!--Setting environment-->
     <a-entity class="scene-env" id="env" environment="preset: default;"></a-entity>
-    <a-ocean class="scene-env" width="500" depth="500" density="100" visible="false"></a-ocean>
-    <a-entity class="scene-env" gltf-model="#clouds" position="0 34.15 0" scale="0.02 0.02 0.02" visible="false"></a-entity>
+    <a-ocean class="scene-env" id="water-env" width="500" depth="500" density="100" visible="false"></a-ocean>
+    <a-entity class="scene-env" id="air-env" gltf-model="#clouds" position="0 34.15 0" scale="0.02 0.02 0.02" visible="false"></a-entity>
   </a-scene>
 </body>
 </html>
