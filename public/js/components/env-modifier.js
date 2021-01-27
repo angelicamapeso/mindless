@@ -21,6 +21,7 @@ AFRAME.registerComponent("env-modifier", {
 
       // set the current scene
       this.currentScene = this.scenes[this.currentSceneIndex];
+      clearScene(this.sceneObjects, this.sceneEnvironments);
       switch (this.currentScene) {
         case this.GROUND:
           console.log("Set ground scene");
@@ -49,3 +50,12 @@ AFRAME.registerComponent("env-modifier", {
     el.removeEventListener("click", this.handleClick);
   },
 });
+
+function clearScene(sceneObjects, sceneEnvironments) {
+  sceneObjects.forEach((object) => object.setAttribute("visible", false));
+  sceneEnvironments.forEach((environment) => {
+    if (environment.id != "env") {
+      environment.setAttribute("visible", false);
+    }
+  });
+}
