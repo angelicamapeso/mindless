@@ -49,7 +49,7 @@
       </a-circle>
       <!--on-camera-selectable class used for grabbing all objects that can appear on camera when selected-->
       <!--all on-camera-selectables need a target to display the related object in scene once closed-->
-      <a-entity target="box" class="on-camera-selectable" id="selected-box" position="0 0 -1.0" geometry="primitive:box; width: 0.2; height: 0.2; depth: 0.2;" rotation="-45 0 -45" material="color:#FF0000" visible="false"></a-entity>
+      <a-entity env-modifier target="box" class="on-camera-selectable" id="selected-box" position="0 0 -1.0" geometry="primitive:box; width: 0.2; height: 0.2; depth: 0.2;" rotation="-45 0 -45" material="color:#FF0000" visible="false"></a-entity>
       <a-entity target="sphere" class="on-camera-selectable" id="selected-sphere" position="0 0 -1.0" geometry="primitive:sphere; radius:0.2" material="color:#00FF00" visible="false"></a-entity>
       <a-entity target="cone" class="on-camera-selectable" id="selected-cone" position="0 0 -1.0" geometry="primitive:cone; height:0.3; radiusBottom:0.2;" material="color:#0000FF" visible="false"></a-entity>
     </a-entity>
