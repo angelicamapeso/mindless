@@ -7,6 +7,11 @@ AFRAME.registerComponent("env-modifier", {
     this.currentSceneIndex = 0;
     this.currentScene = this.GROUND;
 
+    // Grab all scene objects
+    this.sceneObjects = document.querySelectorAll(".scene-object");
+    // Grab all scene environments
+    this.sceneEnvironments = document.querySelectorAll(".scene-env");
+
     this.handleClick = () => {
       // set the scene index
       this.currentSceneIndex =
