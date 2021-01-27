@@ -5,6 +5,14 @@ AFRAME.registerComponent("deselect-control", {
         ".on-camera-selectable"
       );
       for (const selectable of onCameraSelectables) {
+        // make all in scene selectables clickable again
+        const inScene = document.getElementById(
+          selectable.getAttribute("target")
+        );
+        inScene.classList.add("clickable");
+
+        // use case for displaying in scene object and hiding
+        // current ui
         if (selectable.getAttribute("visible")) {
           // hide the selected object
           selectable.setAttribute("visible", false);
@@ -15,13 +23,7 @@ AFRAME.registerComponent("deselect-control", {
           this.el.classList.remove("clickable");
 
           // display the related environment object
-          const toDisplay = document.getElementById(
-            selectable.getAttribute("target")
-          );
-          toDisplay.setAttribute("visible", true);
-          toDisplay.classList.add("clickable");
-
-          break;
+          inScene.setAttribute("visible", true);
         }
       }
     };
