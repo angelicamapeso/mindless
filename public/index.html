@@ -42,7 +42,7 @@
 
     <!-- <a-entity gltf-model="#small-boat" scale="0.02 0.02 0.02"></a-entity> -->
     <!-- <a-entity gltf-model="#campfire" position="0 0 0" scale="0.01 0.01 0.01"></a-entity> -->
-    <a-entity gltf-model="#ship" position="-0.446 -1.985 -0.513" scale="0.01 0.01 0.01" rotation="0 -90 0"></a-entity>
+    <a-entity gltf-model="#ship" position="-0.297 -1.985 -0.513" scale="0.01 0.01 0.01" rotation="0 -90 0"></a-entity>
     
     <!--Camera-->
     <a-entity camera wasd-controls look-controls position="0 1.6 0">
@@ -54,13 +54,14 @@
       <!--all on-camera-selectables need a target to display the related object in scene once closed-->
       <a-entity target="box" class="on-camera-selectable" id="selected-box" position="0 0 -1.0" geometry="primitive:box; width: 0.2; height: 0.2; depth: 0.2;" rotation="-45 0 -45" material="color:#FF0000" visible="false"></a-entity>
       <a-entity target="sphere" class="on-camera-selectable" id="selected-sphere" position="0 0 -1.0" geometry="primitive:sphere; radius:0.2" material="color:#00FF00" visible="false"></a-entity>
+      <a-entity target="cone" class="on-camera-selectable" id="selected-cone" position="0 0 -1.0" geometry="primitive:cone; height:0.3; radiusBottom:0.2;" material="color:#0000FF" visible="false"></a-entity>
     </a-entity>
     
     <!--Selectable class used for grabbing all selectable objects-->
     <a-entity id="box"
     class="clickable selectable"
     selectable="target: selected-box"
-    position="-0.967 0.999 -1.108"
+    position="-0.813 0.999 -1.108"
     geometry="primitive:box; width:0.3; height:0.3; depth:0.3;"
     material="color:#FF0000;"></a-entity>
 
@@ -70,6 +71,13 @@
     position="0 0.999 -1.108"
     geometry="primitive:sphere; radius:0.2;"
     material="color:#00FF00;"></a-entity>
+
+    <a-entity id="cone"
+    class="clickable selectable"
+    selectable="target: selected-cone"
+    position="0.813 0.999 -1.108"
+    geometry="primitive:cone; height:0.3; radiusBottom:0.2;"
+    material="color:#0000FF;"></a-entity>
     
     <!--Setting environment-->
     <!-- <a-entity id="env" environment="preset: default;"></a-entity> -->
