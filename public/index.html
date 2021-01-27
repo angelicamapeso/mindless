@@ -40,10 +40,7 @@
       <a-asset-item id="ship" src="/models/flying_cyber_ship/scene.gltf"></a-asset-item>
     </a-assets>
 
-    <!-- <a-entity gltf-model="#small-boat" scale="0.02 0.02 0.02"></a-entity> -->
-    <!-- <a-entity gltf-model="#campfire" position="0 0 0" scale="0.01 0.01 0.01"></a-entity> -->
-    <a-entity gltf-model="#ship" position="-0.297 -1.985 -0.513" scale="0.01 0.01 0.01" rotation="0 -90 0"></a-entity>
-    
+    <!--Start of UI-->
     <!--Camera-->
     <a-entity camera wasd-controls look-controls position="0 1.6 0">
       <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; objects:.clickable;"></a-entity>
@@ -78,6 +75,12 @@
     position="0.813 0.999 -1.108"
     geometry="primitive:cone; height:0.3; radiusBottom:0.2;"
     material="color:#0000FF;"></a-entity>
+    <!--End of UI-->
+
+    <!--Scene objects-->
+    <!-- <a-entity gltf-model="#small-boat" scale="0.02 0.02 0.02"></a-entity> -->
+    <!-- <a-entity gltf-model="#campfire" position="0 0 0" scale="0.01 0.01 0.01"></a-entity> -->
+    <a-entity gltf-model="#ship" position="-0.297 -1.985 -0.513" scale="0.01 0.01 0.01" rotation="0 -90 0"></a-entity>
     
     <!--Setting environment-->
     <!-- <a-entity id="env" environment="preset: default;"></a-entity> -->
