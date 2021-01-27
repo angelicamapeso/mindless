@@ -52,8 +52,9 @@
       <a-entity id="selected-box" position="0 0 -1.0" geometry="primitive:box; width: 0.2; height: 0.2; depth: 0.2;" rotation="-45 0 -45" material="color:#FF0000" visible="false"></a-entity>
     </a-entity>
     
+    <!--Selectable class used for grabbing all selectable objects-->
     <a-entity id="box"
-    class="clickable"
+    class="clickable selectable"
     selectable="target: selected-box"
     position="-0.967 0.999 -1.108"
     geometry="primitive:box; width:0.3; height:0.3; depth:0.3;"
