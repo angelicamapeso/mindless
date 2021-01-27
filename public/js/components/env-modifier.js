@@ -54,8 +54,10 @@ AFRAME.registerComponent("env-modifier", {
 function clearScene(sceneObjects, sceneEnvironments) {
   sceneObjects.forEach((object) => object.setAttribute("visible", false));
   sceneEnvironments.forEach((environment) => {
-    if (environment.id != "env") {
+    if (environment.id != "ground-env") {
       environment.setAttribute("visible", false);
+    } else {
+      environment.setAttribute("environment", "active", false);
     }
   });
 }
@@ -72,15 +74,8 @@ function setGroundScene(sceneObjects, sceneEnvironments) {
   // Get ground obj
   const groundObject = getSceneModel("ground-object", sceneObjects);
   // Get ground env
-  const groundEnvironment = getSceneModel("env", sceneEnvironments);
+  const groundEnvironment = getSceneModel("ground-env", sceneEnvironments);
 
   groundObject.setAttribute("visible", true);
-  groundEnvironment.setAttribute("environment", "ground", "hills");
-  groundEnvironment.setAttribute("environment", "groundTexture", "walkernoise");
-  groundEnvironment.setAttribute("environment", "groundColor", "#125e08");
-  groundEnvironment.setAttribute("environment", "groundColor2", "#083f16");
-  groundEnvironment.setAttribute("environment", "dressing", "trees");
-  groundEnvironment.setAttribute("environment", "dressingAmount", 100);
-  groundEnvironment.setAttribute("environment", "dressingScale", 20);
-  groundEnvironment.setAttribute("environment", "dressingColor", "#355f37");
+  groundEnvironment.setAttribute("environment", "active", true);
 }
