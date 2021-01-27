@@ -11,6 +11,8 @@
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   <!--Components-->
   <script src="/js/components/env-modifier.js"></script>
+  <script src="/js/components/selectable.js"></script>
+
   <title>Mix N' Match</title>
 </head>
 <body>
@@ -44,11 +46,12 @@
     <!--Camera-->
     <a-entity camera wasd-controls look-controls position="0 1.6 0">
       <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; objects:.clickable;"></a-entity>
+      <a-entity id="selected-box" position="0 0 -1.0" geometry="primitive:box; width: 0.2; height: 0.2; depth: 0.2;" rotation="-45 0 -45" material="color:#FF0000" visible="false"></a-entity>
     </a-entity>
     
     <a-entity id="box"
     class="clickable"
-    env-modifier="envId: env;"
+    selectable="target: selected-box"
     position="-0.967 0.999 -1.108"
     geometry="primitive:box; width:0.3; height:0.3; depth:0.3;"
     material="color:#FF0000;"></a-entity>
