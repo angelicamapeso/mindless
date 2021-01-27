@@ -7,6 +7,9 @@ AFRAME.registerComponent("selectable", {
     if (this.data.target) {
       this.targetEl = document.getElementById(this.data.target);
       this.handleClick = () => {
+        const ui = document.getElementById("close-button");
+        ui.setAttribute("visible", true);
+        ui.classList.add("clickable");
         this.targetEl.setAttribute("visible", true);
         this.targetEl.classList.add("clickable");
         this.el.classList.remove("clickable");
