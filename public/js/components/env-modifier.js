@@ -1,17 +1,34 @@
 AFRAME.registerComponent("env-modifier", {
-  schema: {
-    // id of environment that this will change
-    envId: { type: "string", default: "" },
-  },
-
   // Runs when object created
   init: function () {
-    this.envEl = document.getElementById(this.data.envId);
+    // setting scene variables
+    this.scenes = ["ground", "water", "air"];
+    [this.GROUND, this.WATER, this.AIR] = this.scenes;
+    this.currentSceneIndex = 0;
+    this.currentScene = this.GROUND;
+
     this.handleClick = () => {
-      console.log(this.envEl);
-      this.envEl.setAttribute("environment", {
-        preset: "egypt",
-      });
+      // set the scene index
+      this.currentSceneIndex =
+        this.currentSceneIndex + 1 >= this.scenes.length
+          ? 0
+          : this.currentSceneIndex + 1;
+
+      // set the current scene
+      this.currentScene = this.scenes[this.currentSceneIndex];
+      switch (this.currentScene) {
+        case this.GROUND:
+          console.log("Set ground scene");
+          break;
+        case this.WATER:
+          console.log("Set water scene");
+          break;
+        case this.AIR:
+          console.log("Set air scene");
+          break;
+        default:
+          console.log("Invalid scene!");
+      }
     };
   },
 
