@@ -22,22 +22,29 @@
       <!--Wooden Boat by o0ozexo0o
         Sketchfab: https://sketchfab.com/3d-models/wooden-boat-55118b23a5494e4b81eed831b9f8c871
       -->
-      <a-asset-item id="small-boat" src="/models/wooden_boat/scene.gltf"></a-asset-item>
+      <!-- <a-asset-item id="small-boat" src="/models/wooden_boat/scene.gltf"></a-asset-item> -->
       
       <!--3D Mesh of a Cloud by DanielCork
         Sketchfab: https://sketchfab.com/3d-models/3d-mesh-of-a-cloud-707f6e225ea74776b5c1f298160b27ea
       -->
-      <a-asset-item id="clouds" src="/models/3d_mesh_of_a_cloud/scene.gltf"></a-asset-item>
+      <!-- <a-asset-item id="clouds" src="/models/3d_mesh_of_a_cloud/scene.gltf"></a-asset-item> -->
       
       <!--Campfire Wood Survival Warm and Light by digrafstudio
         Sketchfab: https://sketchfab.com/3d-models/campfire-wood-survival-warm-and-light-efd0ac8c5cca46bfaae91b3851b9c75f
       -->
-      <a-asset-item id="campfire" src="/models/campfire_wood_survival_warm_and_light/scene.gltf"></a-asset-item>
+      <!-- <a-asset-item id="campfire" src="/models/campfire_wood_survival_warm_and_light/scene.gltf"></a-asset-item> -->
       
       <!--Flying cyber ship by igoremba
         Sketchfab: https://sketchfab.com/3d-models/flying-cyber-ship-6cc34c7faa0646efb7dcf87747418f9e
       -->
-      <a-asset-item id="ship" src="/models/flying_cyber_ship/scene.gltf"></a-asset-item>
+      <!-- <a-asset-item id="ship" src="/models/flying_cyber_ship/scene.gltf"></a-asset-item> -->
+
+      <!--"Unreal_VR_Room_01" (https://skfb.ly/6sNEx) by Cyril Limoges Athiel is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).-->
+      <a-asset-item id="scifi" src="/models/unreal_vr_room_01/scene.gltf"></a-asset-item>
+      <!--"Investigator Office (Colored Version)" (https://skfb.ly/6wWGW) by Vincent is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).-->
+      <a-asset-item id="mystery" src="/models/investigator_office_colored_version/scene.gltf"></a-asset-item>
+      <!--"Nursery Room - Furnished" (https://skfb.ly/6BWXD) by IUPUI University Library is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).-->
+      <a-asset-item id="history" src="/models/nursery_room_-_furnished/scene.gltf"></a-asset-item>
     </a-assets>
 
     <!--Start of UI-->
@@ -50,42 +57,30 @@
       <!--on-camera-selectable class used for grabbing all objects that can appear on camera when selected-->
       <!--all on-camera-selectables need a target to display the related object in scene once closed-->
       <a-entity env-modifier target="box" class="on-camera-selectable" id="selected-box" position="0 0 -1.0" geometry="primitive:box; width: 0.2; height: 0.2; depth: 0.2;" rotation="-45 0 -45" material="color:#FF0000" visible="false"></a-entity>
-      <a-entity target="sphere" class="on-camera-selectable" id="selected-sphere" position="0 0 -1.0" geometry="primitive:sphere; radius:0.2" material="color:#00FF00" visible="false"></a-entity>
-      <a-entity target="cone" class="on-camera-selectable" id="selected-cone" position="0 0 -1.0" geometry="primitive:cone; height:0.3; radiusBottom:0.2;" material="color:#0000FF" visible="false"></a-entity>
     </a-entity>
     
     <!--Selectable class used for grabbing all selectable objects-->
-    <a-entity id="box"
+    <!-- <a-entity id="box"
     class="clickable selectable"
     selectable="target: selected-box"
     position="-0.813 0.999 -1.108"
     geometry="primitive:box; width:0.3; height:0.3; depth:0.3;"
-    material="color:#FF0000;"></a-entity>
-
-    <a-entity id="sphere"
-    class="clickable selectable"
-    selectable="target: selected-sphere"
-    position="0 0.999 -1.108"
-    geometry="primitive:sphere; radius:0.2;"
-    material="color:#00FF00;"></a-entity>
-
-    <a-entity id="cone"
-    class="clickable selectable"
-    selectable="target: selected-cone"
-    position="0.813 0.999 -1.108"
-    geometry="primitive:cone; height:0.3; radiusBottom:0.2;"
-    material="color:#0000FF;"></a-entity>
+    material="color:#FF0000;"></a-entity> -->
     <!--End of UI-->
 
+    <!-- <a-entity gltf-model="#scifi" rotation="0 -90 0" position="0 3.295 -12.267" scale="5 5 5"></a-entity> -->
+    <!-- <a-entity gltf-model="#mystery" rotation="0 180 0" scale="0.009 0.009 0.009" position="2.902 0 -5.828"></a-entity> -->
+    <!-- <a-entity gltf-model="#history" rotation="0 138.76 0" scale="0.001 0.001 0.001" position="-0.329 0 1.055"></a-entity> -->
+
     <!--Scene objects-->
-    <a-entity class="scene-object" id="ground-object" gltf-model="#campfire" position="1.734 0 0" scale="0.01 0.01 0.01"></a-entity>
-    <a-entity class="scene-object" id="water-object" gltf-model="#small-boat" scale="0.02 0.02 0.02" visible="false"></a-entity>
-    <a-entity class="scene-object" id="air-object" gltf-model="#ship" position="-0.297 -1.985 -0.513" scale="0.01 0.01 0.01" rotation="0 -90 0" visible="false"></a-entity>
+    <!-- <a-entity class="scene-object" id="ground-object" gltf-model="#campfire" position="1.734 0 0" scale="0.01 0.01 0.01"></a-entity> -->
+    <!-- <a-entity class="scene-object" id="water-object" gltf-model="#small-boat" scale="0.02 0.02 0.02" visible="false"></a-entity> -->
+    <!-- <a-entity class="scene-object" id="air-object" gltf-model="#ship" position="-0.297 -1.985 -0.513" scale="0.01 0.01 0.01" rotation="0 -90 0" visible="false"></a-entity> -->
     
     <!--Setting environment-->
-    <a-entity class="scene-env" id="ground-env" environment="preset: forest; fog: 0; skyColor: #FFFFFF; skyType: none;"></a-entity>
-    <a-ocean class="scene-env" id="water-env" width="500" depth="500" density="100" visible="false"></a-ocean>
-    <a-entity class="scene-env" id="air-env" gltf-model="#clouds" position="0 34.15 0" scale="0.02 0.02 0.02" visible="false"></a-entity>
+    <!-- <a-entity class="scene-env" id="ground-env" environment="preset: forest; fog: 0; skyColor: #FFFFFF; skyType: none;"></a-entity> -->
+    <!-- <a-ocean class="scene-env" id="water-env" width="500" depth="500" density="100" visible="false"></a-ocean> -->
+    <!-- <a-entity class="scene-env" id="air-env" gltf-model="#clouds" position="0 34.15 0" scale="0.02 0.02 0.02" visible="false"></a-entity> -->
 
     <a-sky color="#FF0000"></a-sky>
     <a-entity light="type: ambient; color: #CCC"></a-entity>
