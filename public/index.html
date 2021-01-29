@@ -35,19 +35,21 @@
     <!--Camera-->
     <a-entity camera wasd-controls look-controls position="0 1.6 0">
       <a-entity cursor="rayOrigin:mouse;" raycaster="far:20; interval:200; objects:.clickable;"></a-entity>
-      <a-circle deselect-control id="close-button" color="#FFFFFF" radius="0.05" position="0.2 0.196 -0.903" visible="false">
+      <a-circle deselect-control id="close-button" color="#FFFFFF" radius="0.05" position="0.331 0.196 -0.903" visible="false">
         <a-text text="value: X" align="center" width="1" color="#000000"></a-text>
       </a-circle>
       <!--on-camera-selectable class used for grabbing all objects that can appear on camera when selected-->
       <!--all on-camera-selectables need a target to display the related object in scene once closed-->
-      <a-entity env-modifier target="box" class="on-camera-selectable" id="selected-box" position="0 0 -1.0" geometry="primitive:box; width: 0.2; height: 0.2; depth: 0.2;" rotation="-45 0 -45" material="color:#FF0000" visible="false"></a-entity>
+      <a-entity gltf-model="#tv" scale="0.4 0.4 0.4" position="0 -0.105 -1.329" class="on-camera-selectable" id="selected-tv-controller" position="0 0 -1.0" visible="false" target="tv-controller">
+        <a-entity geometry="primitive:sphere;" position="0.012 0.036 0.371" scale="0.940 0.756 0.752" material="color:#000000"></a-entity>
+      </a-entity>
     </a-entity>
     
     <!--TV (Controller)-->
-    <a-entity>
-      <a-entity gltf-model="#tv" scale="0.4 0.4 0.4" position="0 0.332 -1.814"></a-entity>
-      <a-entity geometry="primitive:sphere;" position="0.012 0.368 -1.586" scale="0.338 0.259 0.184" material="color:#000000"></a-entity>
+    <a-entity gltf-model="#tv" scale="0.4 0.4 0.4" position="0 0.332 -1.814" id="tv-controller" class="clickable selectable" selectable="target: selected-tv-controller">
+      <a-entity geometry="primitive:sphere;" position="0.012 0.036 0.371" scale="0.940 0.756 0.752" material="color:#000000"></a-entity>
     </a-entity>
+      
 
     <!--Selectable class used for grabbing all selectable objects-->
     <!-- <a-entity id="box"
