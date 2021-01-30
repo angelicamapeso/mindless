@@ -26,7 +26,7 @@
       <!--"Nursery Room - Furnished" (https://skfb.ly/6BWXD) by IUPUI University Library is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).-->
       <a-asset-item id="history" src="/models/nursery_room_-_furnished/scene.gltf"></a-asset-item>
       <!--"Retro TV" (https://skfb.ly/6RKxy) by Alex is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).-->
-      <a-asset-item id="tv" src="models/retro_tv/scene.gltf"></a-asset-item>
+      <a-asset-item id="tv" src="models/cartoon_tv/scene.gltf"></a-asset-item>
       <!--"Worn couch" (https://skfb.ly/UrCB) by Simon Phan is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).-->
       <a-asset-item id="couch" src="models/worn_couch/scene.gltf"></a-asset-item>
     </a-assets>
@@ -40,14 +40,14 @@
       </a-circle>
       <!--on-camera-selectable class used for grabbing all objects that can appear on camera when selected-->
       <!--all on-camera-selectables need a target to display the related object in scene once closed-->
-      <a-entity gltf-model="#tv" scale="0.4 0.4 0.4" position="0 -0.105 -1.329" class="on-camera-selectable" id="selected-tv-controller" position="0 0 -1.0" visible="false" target="tv-controller">
-        <a-entity geometry="primitive:sphere;" position="0.012 0.036 0.371" scale="0.940 0.756 0.752" material="color:#000000"></a-entity>
+      <a-entity gltf-model="#tv" scale="0.015 0.015 0.015" position="0 -0.521 -1.329" class="on-camera-selectable" id="selected-tv-controller" position="0 0 -1.0" visible="false" target="tv-controller">
+        <a-entity geometry="primitive:plane; width:45; height:45;" position="-3.630 25.027 8.382" rotation="-3.767 0 0"></a-entity>
       </a-entity>
     </a-entity>
     
     <!--TV (Controller)-->
-    <a-entity gltf-model="#tv" scale="0.4 0.4 0.4" position="0 0.332 -1.814" id="tv-controller" class="clickable selectable" selectable="target: selected-tv-controller">
-      <a-entity geometry="primitive:sphere;" position="0.012 0.036 0.371" scale="0.940 0.756 0.752" material="color:#000000"></a-entity>
+    <a-entity gltf-model="#tv" scale="0.015 0.015 0.015" position="0 0.332 -1.814" id="tv-controller" class="clickable selectable" selectable="target: selected-tv-controller">
+      <a-entity geometry="primitive:plane; width:45; height:45;" position="-3.630 25.027 8.382" rotation="-3.767 0 0"></a-entity>
     </a-entity>
 
     <!--Initial Scene-->
