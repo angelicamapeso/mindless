@@ -41,12 +41,18 @@
       <!--all on-camera-selectables need a target to display the related object in scene once closed-->
       <a-entity gltf-model="#tv" scale="0.015 0.015 0.015" position="0 -0.521 -1.329" class="on-camera-selectable" id="selected-tv-controller" position="0 0 -1.0" visible="false" target="tv-controller">
         <a-entity id="selected-screen" class="screen" geometry="primitive:plane; width:45; height:45;" position="-3.630 25.027 8.382" rotation="-3.767 0 0" material="color: #000000"></a-entity>
-        <a-entity tv-controller class="clickable" geometry="primitive:cylinder" position="33.138 38.536 13.560" rotation="90 0 0" scale="-3.693 -3.693 -3.693" height="10" radius="5" material="color: #480f0f"></a-entity>
+        <a-entity tv-controller class="clickable" geometry="primitive:cylinder" position="33.138 38.536 14" rotation="90 0 0" scale="-3.693 -3.693 -3.693" height="10" radius="5" material="color: #480f0f"
+          animation__hover="property: material.color; to: #a43737; dur:200; startEvents: mouseenter;"
+          animation__leave="property: material.color; to: #480f0f; dur:200; startEvents: mouseleave;"
+          animation__click="property: position; to: 33.138 38.536 12.8; dur:150; easing: easeOutQuad; startEvents: click;"
+          animation__pressLeave="property: position; to: 33.138 38.536 14; dur:150; startEvents: animationcomplete__click;"></a-entity>
       </a-entity>
     </a-entity>
     
     <!--TV (Controller)-->
-    <a-entity gltf-model="#tv" scale="0.015 0.015 0.015" position="0 0.332 -1.814" id="tv-controller" class="clickable selectable" selectable="target: selected-tv-controller">
+    <a-entity gltf-model="#tv" scale="0.015 0.015 0.015" position="0 0.332 -1.814" id="tv-controller" class="clickable selectable" selectable="target: selected-tv-controller"
+      animation__hover="property: scale; to: 0.0155 0.0155 0.0155; dur:300; startEvents: mouseenter;"
+      animation__leave="property: scale; to: 0.015 0.015 0.015; dur:300; startEvents: mouseleave;">
       <a-entity id="screen" class="screen" geometry="primitive:plane; width:45; height:45;" position="-3.630 25.027 8.382" rotation="-3.767 0 0" material="color: #000000"></a-entity>
       <a-entity geometry="primitive:cylinder" position="33.138 38.536 13.560" rotation="90 0 0" scale="-3.693 -3.693 -3.693" height="10" radius="5" material="color: #480f0f"></a-entity>
     </a-entity>
