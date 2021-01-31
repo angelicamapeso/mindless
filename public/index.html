@@ -12,6 +12,8 @@
   <!--A-Frame gif shaders to display GIF-->
   <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
   <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
+  <!--A-Frame outlines-->
+  <script src="https://rawgit.com/takahirox/aframe-outline/master/build/aframe-outline.min.js"></script> 
   <!--Components-->
   <script src="/js/components/selectable.js"></script>
   <script src="/js/components/deselect-control.js"></script>
@@ -62,6 +64,9 @@
     <a-entity id="floor" class="scene-1" geometry="primitive:plane; width:5; height:5;" material="color:#030303" rotation="-90 0 0"></a-entity>
     <a-entity id="car-obj" class="scene-2" gltf-model="#car" position="0.502 -0.154 -0.717" scale="20 20 20" rotation="0 180 0" animation="property: rotation; from: 0 180 0; to: -0.5 180 0; dir: alternate; dur: 400; easing: easeOutQuad; loop:true;" visible="false">
       <a-entity scale="0.05 0.05 0.05" rotation="3.241 0 0" position="-0.001 0.094 -0.022" geometry="primitive: box; width: 0.1; height: 0.04; depth: 0.320;" material="color: #a920cf; emissive: #865b9a; emissiveIntensity: 0.530;" light="color: #702e65; distance: 2.120; intensity: 1.490; type: point;"></a-entity>
+      <a-entity class="clickable" geometry="primitive: cylinder; radius: 0.5;" position="0 0.049 -0.011" scale="0.005 0.005 0.005" material="color: #212f73"
+        animation__hover="property: material.color; to: #cedcfd; dur:200; startEvents: mouseenter;"
+        animation__leave="property: material.color; to: #212f73; dur:200; startEvents: mouseleave;"></a-entity>
     </a-entity>
     
     <a-sky id="sky" class="scene-1" color="#000000"></a-sky>
