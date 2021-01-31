@@ -29,7 +29,17 @@
       <a-asset-item id="couch" src="models/worn_couch/scene.gltf"></a-asset-item>
       <!--"Alfa Romeo Stradale 1967" (https://skfb.ly/6xMZX) by Ipatov Kirill is licensed under Creative Commons Attribution-NonCommercial (http://creativecommons.org/licenses/by-nc/4.0/).-->
       <a-asset-item id="car" src="models/alfa_romeo_stradale_1967/scene.gltf"></a-asset-item>
+      <!-- "Urban Haze" (https://freemusicarchive.org/music/Scott_Holmes/media-music-mix/urban-haze) by Scott Holmes is licensed under Creative Commons Attribution-NonCommercial (http://creativecommons.org/licenses/by-nc/4.0/)-->
+      <audio id="music" src="/audio/scottHolmes_urbanHaze.mp3"></audio>
+
+      <audio id="ignition" src="/audio/ignition.wav"></audio>
+      <audio id="ambience" src="/audio/car_ambience.wav"></audio>
+      <!---->
     </a-assets>
+    <!-- Audio-->
+    <a-sound id="car-music" src="#music" loop="true" preload="true" volume="0.5"></a-sound>
+    <a-sound id="car-ignition" src="#ignition" preload="true" volume="0.6"></a-sound>
+    <a-sound id="car-ambience" src="#ambience" preload="true" volume="0.2"></a-sound>
 
     <!--Start of UI-->
     <!--Camera-->
@@ -70,6 +80,7 @@
         animation__pressLeave="property: position; to: 0 0.048 -0.011; dur:150; startEvents: animationcomplete__click;"></a-entity>
     </a-entity>
     
+    <!--Sky/environment-->
     <a-sky id="sky" class="scene-1" color="#000000"></a-sky>
     <a-entity id="dir-light" class="scene-1" light="trype: directional; color: #fef3c8; intensity: 2;" position="0 2.309 0.236"></a-entity>
     <a-entity id ="env" class="scene-2" environment="preset: starry; active: false;" animation="property: position; from: 0 0 -3; to: 0 0 -2; easing: linear; loop: true; dur: 1000;"></a-entity>

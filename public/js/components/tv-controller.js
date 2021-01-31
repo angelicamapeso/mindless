@@ -9,6 +9,9 @@ AFRAME.registerComponent("tv-controller", {
     this.scene2Objects = document.querySelectorAll(".scene-2");
     this.screens = document.querySelectorAll(".screen");
     this.inSceneTv = document.getElementById("tv-controller");
+    this.carMusic = document.getElementById("car-music");
+    this.carIgnition = document.getElementById("car-ignition");
+    this.carAmbience = document.getElementById("car-ambience");
     this.showScene2 = false;
 
     this.handleClick = () => {
@@ -39,9 +42,16 @@ AFRAME.registerComponent("tv-controller", {
       if (this.showScene2) {
         this.inSceneTv.setAttribute("position", "1.040 0.524 -0.950");
         this.inSceneTv.setAttribute("rotation", "-6.312 -65.282 -6.943");
+
+        this.carMusic.components.sound.playSound();
+        this.carIgnition.components.sound.playSound();
+        this.carAmbience.components.sound.playSound();
       } else {
         this.inSceneTv.setAttribute("position", "0 0.332 -1.814");
         this.inSceneTv.setAttribute("rotation", "0 0 0");
+
+        this.carMusic.components.sound.pauseSound();
+        this.carAmbience.components.sound.pauseSound();
       }
     };
   },
