@@ -8,6 +8,7 @@ AFRAME.registerComponent("tv-controller", {
     this.scene1Objects = document.querySelectorAll(".scene-1");
     this.scene2Objects = document.querySelectorAll(".scene-2");
     this.screens = document.querySelectorAll(".screen");
+    this.inSceneTv = document.getElementById("tv-controller");
     this.showScene2 = false;
 
     this.handleClick = () => {
@@ -33,6 +34,14 @@ AFRAME.registerComponent("tv-controller", {
           screen.setAttribute("material", "color", "#000000");
           screen.removeAttribute("gif");
         }
+      }
+
+      if (this.showScene2) {
+        this.inSceneTv.setAttribute("position", "1.040 0.524 -0.950");
+        this.inSceneTv.setAttribute("rotation", "-6.312 -65.282 -6.943");
+      } else {
+        this.inSceneTv.setAttribute("position", "0 0.332 -1.814");
+        this.inSceneTv.setAttribute("rotation", "0 0 0");
       }
     };
   },
