@@ -11,7 +11,6 @@ AFRAME.registerComponent("selectable", {
         ui.setAttribute("visible", true);
         ui.classList.add("clickable");
         this.targetEl.setAttribute("visible", true);
-        this.targetEl.classList.add("clickable");
         this.el.setAttribute("visible", false);
 
         // make all other selectable objects unclickable when something selected
