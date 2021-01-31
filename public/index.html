@@ -15,6 +15,7 @@
   <!--Components-->
   <script src="/js/components/selectable.js"></script>
   <script src="/js/components/deselect-control.js"></script>
+  <script src="/js/components/tv-controller.js"></script>
 
   <title>Mix N' Match</title>
 </head>
@@ -38,24 +39,24 @@
       </a-circle>
       <!--on-camera-selectable class used for grabbing all objects that can appear on camera when selected-->
       <!--all on-camera-selectables need a target to display the related object in scene once closed-->
-      <a-entity gltf-model="#tv" scale="0.015 0.015 0.015" position="0 -0.521 -1.329" class="on-camera-selectable" id="selected-tv-controller" position="0 0 -1.0" visible="false" target="tv-controller">
-        <a-entity geometry="primitive:plane; width:45; height:45;" position="-3.630 25.027 8.382" rotation="-3.767 0 0"></a-entity>
+      <a-entity tv-controller gltf-model="#tv" scale="0.015 0.015 0.015" position="0 -0.521 -1.329" class="on-camera-selectable" id="selected-tv-controller" position="0 0 -1.0" visible="false" target="tv-controller">
+        <a-entity id="selected-screen" class="screen" geometry="primitive:plane; width:45; height:45;" position="-3.630 25.027 8.382" rotation="-3.767 0 0" material="color: #000000"></a-entity>
       </a-entity>
     </a-entity>
     
     <!--TV (Controller)-->
     <a-entity gltf-model="#tv" scale="0.015 0.015 0.015" position="0 0.332 -1.814" id="tv-controller" class="clickable selectable" selectable="target: selected-tv-controller">
-      <a-entity geometry="primitive:plane; width:45; height:45;" position="-3.630 25.027 8.382" rotation="-3.767 0 0" material="shader:gif; src: url(https://media.giphy.com/media/3o85xkFg46ZHS6vX8Y/giphy.gif);" gif=""></a-entity>
+      <a-entity id="screen" class="screen" geometry="primitive:plane; width:45; height:45;" position="-3.630 25.027 8.382" rotation="-3.767 0 0" material="color: #000000"></a-entity>
     </a-entity>
 
     <!--Initial Scene-->
-    <a-entity gltf-model="#couch" rotation="0 180 0" scale="0.5 0.5 0.5"></a-entity>
-    <a-entity geometry="primitive:plane; width:5; height:5;" material="color:#030303" rotation="-90 0 0"></a-entity>
-    <a-entity gltf-model="#car" position="0.502 -0.154 -0.717" scale="20 20 20" rotation="0 180 0" animation="property: rotation; from: 0 180 0; to: -0.5 180 0; dir: alternate; dur: 400; easing: easeOutQuad; loop:true;" visible="false"></a-entity>
+    <a-entity id="couch-obj" class="scene-1" gltf-model="#couch" rotation="0 180 0" scale="0.5 0.5 0.5"></a-entity>
+    <a-entity id="floor" class="scene-1" geometry="primitive:plane; width:5; height:5;" material="color:#030303" rotation="-90 0 0"></a-entity>
+    <a-entity id="car-obj" class="scene-2" gltf-model="#car" position="0.502 -0.154 -0.717" scale="20 20 20" rotation="0 180 0" animation="property: rotation; from: 0 180 0; to: -0.5 180 0; dir: alternate; dur: 400; easing: easeOutQuad; loop:true;" visible="false"></a-entity>
     
-    <a-sky color="#000000"></a-sky>
-    <a-entity light="type: directional; color: #fef3c8; intensity: 2;" position="0 2.309 0.236"></a-entity>
-    <a-entity environment="preset: starry; active: false;" animation="property: position; from: 0 0 -3; to: 0 0 -2; easing: linear; loop: true; dur: 1000;"></a-entity>
+    <a-sky id="sky" class="scene-1" color="#000000"></a-sky>
+    <a-entity id="dir-light" class="scene-1" light="type: directional; color: #fef3c8; intensity: 2;" position="0 2.309 0.236"></a-entity>
+    <a-entity id ="env" class="scene-2" environment="preset: starry; active: false;" animation="property: position; from: 0 0 -3; to: 0 0 -2; easing: linear; loop: true; dur: 1000;"></a-entity>
   </a-scene>
 </body>
 </html>
