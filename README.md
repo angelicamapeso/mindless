@@ -31,12 +31,12 @@ Licensed under [**Creative Commons Attribution-NonCommercial**](http://creativec
 
 - ["Alfa Romeo Stradale 1967" by Ipatov Kirill](https://skfb.ly/6xMZX)
 
-# Audio
+## Audio
 
 Licensed under [**CC Attribution**](https://creativecommons.org/licenses/by/4.0/):
 
 - ["Urban Haze" by Scott Holmes](https://freemusicarchive.org/music/Scott_Holmes/media-music-mix/urban-haze)
 
-# GIPHY
+## GIPHY
 
 - [Art 3D GIF By Todd Rochefor](http://gph.is/1AN0uzk)
