@@ -17,42 +17,12 @@ AFRAME.registerComponent("tv-controller", {
     this.handleClick = () => {
       this.showScene2 = !this.showScene2;
 
-      for (const obj of this.scene2Objects) {
-        if (obj.getAttribute("environment")) {
-          obj.setAttribute("environment", "active", this.showScene2);
-        } else {
-          obj.setAttribute("visible", this.showScene2);
-        }
-      }
-      for (const obj of this.scene1Objects) {
-        obj.setAttribute("visible", !this.showScene2);
-      }
-
-      for (const screen of this.screens) {
-        screen.removeAttribute("material");
-        if (this.showScene2) {
-          screen.setAttribute("material", GIF_MATERIAL);
-          screen.setAttribute("gif", "");
-        } else {
-          screen.setAttribute("material", "color", "#000000");
-          screen.removeAttribute("gif");
-        }
-      }
-
-      if (this.showScene2) {
-        this.inSceneTv.setAttribute("position", "1.040 0.524 -0.950");
-        this.inSceneTv.setAttribute("rotation", "-6.312 -65.282 -6.943");
-
-        this.carMusic.components.sound.playSound();
-        this.carIgnition.components.sound.playSound();
-        this.carAmbience.components.sound.playSound();
-      } else {
-        this.inSceneTv.setAttribute("position", "0 0.332 -1.814");
-        this.inSceneTv.setAttribute("rotation", "0 0 0");
-
-        this.carMusic.components.sound.pauseSound();
-        this.carAmbience.components.sound.pauseSound();
-      }
+      handleIgnition(this.showScene2, this.carIgnition);
+      handleAmbience(this.showScene2, this.carMusic, this.carIgnition);
+      handleScene1(this.showScene2, this.scene1Objects);
+      handleScene2(this.showScene2, this.scene2Objects);
+      handleScreen(this.showScene2, this.screens);
+      handleInSceneTV(this.showScene2, this.inSceneTv);
     };
   },
 
@@ -66,3 +36,60 @@ AFRAME.registerComponent("tv-controller", {
     el.removeEventListener("click", this.handleClick);
   },
 });
+
+function handleAmbience(showScene2, ...ambientAudio) {
+  for (const audio of ambientAudio) {
+    if (showScene2) {
+      audio.components.sound.playSound();
+    } else {
+      audio.components.sound.pauseSound();
+    }
+  }
+}
+
+function handleIgnition(showScene2, ignition) {
+  if (showScene2) {
+    ignition.components.sound.playSound();
+  } else {
+    ignition.components.sound.stopSound();
+  }
+}
+
+function handleScene2(showScene2, scene2Objects) {
+  for (const obj of scene2Objects) {
+    if (obj.getAttribute("environment")) {
+      obj.setAttribute("environment", "active", showScene2);
+    } else {
+      obj.setAttribute("visible", showScene2);
+    }
+  }
+}
+
+function handleScene1(showScene2, scene1Objects) {
+  for (const obj of scene1Objects) {
+    obj.setAttribute("visible", !showScene2);
+  }
+}
+
+function handleScreen(showScene2, screens) {
+  for (const screen of screens) {
+    screen.removeAttribute("material");
+    if (showScene2) {
+      screen.setAttribute("material", GIF_MATERIAL);
+      screen.setAttribute("gif", "");
+    } else {
+      screen.setAttribute("material", "color", "#000000");
+      screen.removeAttribute("gif");
+    }
+  }
+}
+
+function handleInSceneTV(showScene2, inSceneTv) {
+  if (showScene2) {
+    inSceneTv.setAttribute("position", "1.040 0.524 -0.950");
+    inSceneTv.setAttribute("rotation", "-6.312 -65.282 -6.943");
+  } else {
+    inSceneTv.setAttribute("position", "0 0.332 -1.814");
+    inSceneTv.setAttribute("rotation", "0 0 0");
+  }
+}
