@@ -25,7 +25,7 @@ To interact with selectable objects, click or tap them.
 Licensed under [**CC Attribution**](https://creativecommons.org/licenses/by/4.0/):
 
 - ["Retro TV" by Alex](https://skfb.ly/6RKxy)
-- ["Worn couch" by Simon Phan](https://skfb.ly/UrCB)\
+- ["Worn couch" by Simon Phan](https://skfb.ly/UrCB)
 
 Licensed under [**Creative Commons Attribution-NonCommercial**](http://creativecommons.org/licenses/by-nc/4.0/):
 
