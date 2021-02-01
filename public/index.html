@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
   <!--Requiring A-Frame script-->
   <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
   <!--A-Frame environment-->
   <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
-  <!--A-Frame Extras: https://github.com/n5ro/aframe-extras-->
-  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   <!--A-Frame gif shaders to display GIF-->
   <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
   <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
   <!--Components-->
+  <script src="/js/components/loader.js"></script>
   <script src="/js/components/selectable.js"></script>
   <script src="/js/components/deselect-control.js"></script>
   <script src="/js/components/tv-controller.js"></script>
@@ -21,8 +21,11 @@
   <title>Mindless</title>
 </head>
 <body>
-  <a-scene>
-    <a-assets>
+  <div id="loading">
+    <h1>Loading<span id="loading-dots"></span></h1>
+  </div>
+  <a-scene loader>
+    <a-assets timeout="10000">
       <!--"Retro TV" (https://skfb.ly/6RKxy) by Alex is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).-->
       <a-asset-item id="tv" src="models/cartoon_tv/scene.gltf"></a-asset-item>
       <!--"Worn couch" (https://skfb.ly/UrCB) by Simon Phan is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).-->
