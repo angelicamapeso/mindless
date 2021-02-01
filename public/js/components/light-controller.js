@@ -1,7 +1,7 @@
 AFRAME.registerComponent("light-controller", {
   init: function () {
     this.carLight = document.getElementById("car-light");
-    this.isOn = false;
+    this.isOn = true;
     this.handleClick = () => {
       this.isOn = !this.isOn;
 
