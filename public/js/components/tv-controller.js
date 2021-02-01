@@ -5,24 +5,42 @@ const GIF_MATERIAL = {
 
 AFRAME.registerComponent("tv-controller", {
   init: function () {
-    this.scene1Objects = document.querySelectorAll(".scene-1");
-    this.scene2Objects = document.querySelectorAll(".scene-2");
-    this.screens = document.querySelectorAll(".screen");
-    this.inSceneTv = document.getElementById("tv-controller");
-    this.carMusic = document.getElementById("car-music");
-    this.carIgnition = document.getElementById("car-ignition");
-    this.carAmbience = document.getElementById("car-ambience");
+    const scene1Objects = document.querySelectorAll(".scene-1");
+    const scene2Objects = document.querySelectorAll(".scene-2");
+    const screens = document.querySelectorAll(".screen");
+    const inSceneTv = document.getElementById("tv-controller");
+    const carMusic = document.getElementById("car-music");
+    const carIgnition = document.getElementById("car-ignition");
+    const carAmbience = document.getElementById("car-ambience");
     this.showScene2 = false;
+    this.timeout = null;
 
     this.handleClick = () => {
       this.showScene2 = !this.showScene2;
 
-      handleIgnition(this.showScene2, this.carIgnition);
-      handleAmbience(this.showScene2, this.carMusic, this.carIgnition);
-      handleScene1(this.showScene2, this.scene1Objects);
-      handleScene2(this.showScene2, this.scene2Objects);
-      handleScreen(this.showScene2, this.screens);
-      handleInSceneTV(this.showScene2, this.inSceneTv);
+      if (this.showScene2) {
+        // play ignition and change screen first
+        handleIgnition(true, carIgnition);
+        handleScreen(true, screens);
+
+        // handle scene change after delay
+        this.timeout = setTimeout(() => {
+          handleAmbience(true, carMusic, carAmbience);
+          handleScene1(true, scene1Objects);
+          handleScene2(true, scene2Objects);
+          handleInSceneTV(true, inSceneTv);
+        }, 1100);
+      } else {
+        if (this.timeout) {
+          clearTimeout(this.timeout);
+        }
+        handleIgnition(false, carIgnition);
+        handleScreen(false, screens);
+        handleAmbience(false, carMusic, carAmbience);
+        handleScene1(false, scene1Objects);
+        handleScene2(false, scene2Objects);
+        handleInSceneTV(false, inSceneTv);
+      }
     };
   },
 
