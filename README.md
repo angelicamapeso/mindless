@@ -14,7 +14,7 @@ To interact with selectable objects, click or tap them.
 
 - [A-Frame](https://aframe.io/)
 - [aframe-environment-component](https://github.com/supermedium/aframe-environment-component)
-- [A-Frame Extras](https://github.com/n5ro/aframe-extras)
+- [AFrame GIF Shader](https://github.com/mayognaise/aframe-gif-shader)
 
 ### Back-End
 
