@@ -1,3 +1,4 @@
+// Art 3D GIF By Todd Rochefor (http://gph.is/1AN0uzk)
 const GIF_MATERIAL = {
   shader: "gif",
   src: "url(https://media.giphy.com/media/3o85xkFg46ZHS6vX8Y/giphy.gif)",
