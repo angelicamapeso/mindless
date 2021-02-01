@@ -1,6 +1,12 @@
 # Mindless
 
-Mindless is a VR experience for those days where you just want to take a drive and zone out.
+![Mindless Preview](./img/mindless_preview.png)
+
+Mindless is a reflection on how multimedia can transport you to unreal and imaginative worlds. On one hand, it's exciting and impactful, but on the other, real life becomes dull in comparison. This is only a personal observation and is inspired by the few times I became absentminded while watching YouTube videos and multi-tasking.
+
+## Interactivity
+
+To interact with selectable objects, click or tap them.
 
 ## Built with
 
